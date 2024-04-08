@@ -43,15 +43,15 @@ app.post("/singlefile", upload.single("file"), async (req, res) => {
 //syntax upload.array("filename",count);
 // count is optional default we upload as many as we wanta
 app.post("/multiplefiles", upload.array("file"), async (req, res) => {
-  co;
-  for (const file of files) {
-    const newFile = await File.create({
-      name: file.originalname,
-      size: file.size,
-      mimetype: file.mimetype,
-      path: file.path,
-    });
-  }
+  // co;
+  // for (const file of files) {
+  //   const newFile = await File.create({
+  //     name: file.originalname,
+  //     size: file.size,
+  //     mimetype: file.mimetype,
+  //     path: file.path,
+  //   });
+  // }
   res.json({
     success: true,
     file: req.files,
